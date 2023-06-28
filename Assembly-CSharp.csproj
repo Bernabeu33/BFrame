@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/GameLaunch.cs" />
+     <Compile Include="Assets/Scripts/Single/Single.cs" />
      <Compile Include="Assets/Scripts/Single/MonoSingle.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Single" />
