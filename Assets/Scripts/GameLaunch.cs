@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using AssetBundle;
 using UnityEngine;
 
 public class GameLaunch : MonoBehaviour
 {
     private void Awake()
     {
-        
+        // 基础设置
     }
 
     private void Start()
@@ -19,4 +20,6 @@ public class GameLaunch : MonoBehaviour
         // 初始化游戏并进入
         
     }
+
+
 }

@@ -41,15 +41,19 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/Scripts/GameLaunch.cs" />
      <Compile Include="Assets/Scripts/Single/Single.cs" />
+     <Compile Include="Assets/Scripts/Modules/AssetBundle/Config/AssetBundleConfig.cs" />
      <Compile Include="Assets/Scripts/Single/MonoSingle.cs" />
+     <Compile Include="Assets/Scripts/GameLaunch.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Single" />
+     <Folder Include="Assets/Scripts/Modules/AssetBundle" />
      <Folder Include="Assets/Scripts" />
      <Folder Include="Assets/AssetsPackage" />
      <Folder Include="Assets/LuaScripts" />
      <Folder Include="Assets/Scripts/Utils" />
+     <Folder Include="Assets/Scripts/Modules" />
+     <Folder Include="Assets/Scripts/Modules/AssetBundle/Config" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/AssetsPackage/LuaScripts" />
      <Reference Include="UnityEngine">
