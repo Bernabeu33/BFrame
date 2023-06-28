@@ -7,8 +7,24 @@ namespace AssetBundle
 {
     public class AssetBundleConfig
     {
+        private static string _rootPath = string.Empty;
+        public const string AssetBundlesFolderName = "AssetBundles/";
         private static int mIsEditorMode = 1; // 1为编辑器模式，0为真机
         private const string kIsEditorMode = "IsEditorMode";
+        
+        //AssetBundle跟路径
+        public static string AssetBundleRootPath
+        {
+            get
+            {
+                return _rootPath;
+            }
+            set
+            {
+                _rootPath = value;
+            }
+        }
+
         public static bool IsEditorMode
         {
             get
