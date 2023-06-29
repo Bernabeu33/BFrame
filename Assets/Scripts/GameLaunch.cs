@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using AssetBundle;
+using AssetBundles;
 using UnityEngine;
 using UnityEditor;
 

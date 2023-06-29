@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using BFrame;
 
-namespace AssetBundle
+namespace AssetBundles
 {
     public enum GetResourceFullPathType
     {
@@ -27,6 +27,7 @@ namespace AssetBundle
     {
         public IEnumerator Initialize()
         {
+            PathMgr.InitResourcePath();
             var start = DateTime.Now;
             yield return DownloadManager.Instance.Start();
         }

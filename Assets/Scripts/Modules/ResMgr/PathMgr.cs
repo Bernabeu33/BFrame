@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEditor;
-using AssetBundle;
+using AssetBundles;
 
 namespace BFrame
 {
@@ -14,6 +14,58 @@ namespace BFrame
         /// </summary>
         public static string VersionConfigPath = "VersionCfg.json";
 
+        
+        /// <summary>
+        /// Bundles/Android/ etc... no prefix for streamingAssets
+        /// </summary>
+        public static string BundlesPathRelative { get; private set; }
+        
+        
+        /// <summary>
+        /// On Windows, file protocol has a strange rule that has one more slash
+        /// </summary>
+        /// <returns>string, file protocol string</returns>
+        public static string GetFileProtocol
+        {
+            get
+            {
+                string fileProtocol = "file://";
+                if (Application.platform == RuntimePlatform.WindowsEditor ||
+                    Application.platform == RuntimePlatform.WindowsPlayer)
+                {
+                    fileProtocol = "file:///";
+                }else if (Application.platform == RuntimePlatform.Android)
+                {
+                    fileProtocol = "jar:file://";
+                }
+                
+                return fileProtocol;
+            }
+        }
+        
+        private static string appDataPath = null;
+        /// <summary>
+        /// app的数据目录，有读写权限，实际是Application.persistentDataPath，以/结尾
+        /// </summary>
+        public static string AppDataPath
+        {
+            get
+            {
+                if (appDataPath == null) appDataPath = Application.persistentDataPath + "/";
+                return appDataPath;
+            }
+        }
+
+        /// <summary>
+        /// Initialize the path of AssetBundles store place ( Maybe in PersitentDataPath or StreamingAssetsPath )
+        /// </summary>
+        /// <returns></returns>
+        public static void InitResourcePath()
+        {
+            // AssetBundles
+            BundlesPathRelative = AssetBundleConfig.AssetBundlesFolderName;
+            Debug.Log(BundlesPathRelative);
+        }
         
         /// <summary>
         /// 根据相对路径，获取到完整路径，優先从下載資源目录找，没有就读本地資源目錄 

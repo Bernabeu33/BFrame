@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace AssetBundle
+namespace AssetBundles
 {
     public class AssetBundleConfig
     {
