@@ -93,8 +93,12 @@ namespace AssetBundleBrowser
         internal void OnEnable(EditorWindow parent)
         {
             m_InspectTab = (parent as AssetBundleBrowserMain).m_InspectTab;
+            RealEnable();
+        }
 
-            //LoadData...
+        internal void RealEnable()
+        {
+               //LoadData...
             var dataPath = System.IO.Path.GetFullPath(".");
             dataPath = dataPath.Replace("\\", "/");
             dataPath += "/Library/AssetBundleBrowserBuild.dat";

@@ -1,0 +1,14 @@
+ManifestFileVersion: 0
+CRC: 2769832587
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: lua_bbaf938beab0c06f0ccf40aea4bff5f3.assetbundle
+      Dependencies: {}
+    Info_1:
+      Name: prefab_810c74b57782c0816f59724a2abd46fe.assetbundle
+      Dependencies:
+        Dependency_0: materials_1011b8b0ad9138133a7ca2c43a919016.assetbundle
+    Info_2:
+      Name: materials_1011b8b0ad9138133a7ca2c43a919016.assetbundle
+      Dependencies: {}

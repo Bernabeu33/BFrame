@@ -42,7 +42,33 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Editor/BFrameMenu.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/AssetListTree.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/AssetBundleDataSource/ABDataSourceProvider.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/AssetBundleBuildTab.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/MessageList.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/MessageSystem.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/AssetBundleModel/ABModelBundleInfo.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/InspectTab/AssetBundleInspectTab.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/BundleDetailList.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/InspectTab/InspectTreeView.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/AssetBundleModel/ABModelAssetInfo.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/AssetBundleManageTab.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/InspectTab/InspectSingleBundle.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/InspectTab/AssetBundleRecord.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/AssetBundleDataSource/ABDataSource.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/AssetBundleBrowserMain.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/AssetBundleTree.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/AssetBundleDataSource/AssetDatabaseABDataSource.cs" />
+     <Compile Include="Assets/Editor/AssetBundles-Browser/AssetBundleModel/ABModel.cs" />
+     <Compile Include="Assets/Editor/MergeBundleTool.cs" />
+     <Compile Include="Assets/Editor/BuilderCfg.cs" />
      <Folder Include="Assets/Editor" />
+     <Folder Include="Assets/Editor/AssetBundles-Browser/AssetBundleModel" />
+     <Folder Include="Assets/Editor/AssetBundles-Browser/AssetBundleDataSource" />
+     <Folder Include="Assets/Editor/AssetBundles-Browser/InspectTab" />
+     <Folder Include="Assets/Editor/AssetBundles-Browser/Icons" />
+     <Folder Include="Assets/Editor/AssetBundles-Browser" />
+     <None Include="Assets/Editor/AssetBundles-Browser/package.json" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2020.3.45f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

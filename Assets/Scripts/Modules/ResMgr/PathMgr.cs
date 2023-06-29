@@ -27,6 +27,11 @@ namespace BFrame
         /// 控制版本热更的配置文件
         /// </summary>
         public static string VersionConfigPath = "VersionCfg.json";
+        
+        /// <summary>
+        /// 记录所有ab的各种信息，包括md5名字，bundle名字，size
+        /// </summary>
+        public static string VersionListFileName = "AssetVersions.json";
 
         
         /// <summary>

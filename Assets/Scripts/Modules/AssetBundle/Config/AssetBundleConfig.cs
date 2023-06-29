@@ -1,8 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
 using System.IO;
+#endif
 
 namespace AssetBundles
 {
@@ -10,8 +10,10 @@ namespace AssetBundles
     {
         private static string _rootPath = string.Empty;
         public const string AssetBundlesFolderName = "AssetBundles/";
-        private static int mIsEditorMode = 1; // 1为编辑器模式，0为真机
-        private const string kIsEditorMode = "IsEditorMode";
+        public const string AssetsFolderName = "AssetsPackage";
+        public const string CommonMapPattren = ",";
+        public const string AssetsPathMapFileName = "AssetsMap.bytes";
+        public const string AssetBundleSuffix = ".assetbundle";
         
         //AssetBundle跟路径
         public static string AssetBundleRootPath
@@ -25,7 +27,10 @@ namespace AssetBundles
                 _rootPath = value;
             }
         }
-
+        
+#if UNITY_EDITOR
+        private static int mIsEditorMode = 1; // 1为编辑器模式，0为真机
+        private const string kIsEditorMode = "IsEditorMode";
         public static bool IsEditorMode
         {
             get
@@ -34,7 +39,7 @@ namespace AssetBundles
                 {
                     if (!EditorPrefs.HasKey(kIsEditorMode))
                     {
-                        EditorPrefs.SetBool(kIsEditorMode, true);
+                        EditorPrefs.SetBool(kIsEditorMode, false);
                     }
                     mIsEditorMode = EditorPrefs.GetBool(kIsEditorMode, true) ? 1 : 0;
                 }
@@ -50,19 +55,42 @@ namespace AssetBundles
                 }
             }
         }
+#endif
         
         public static string GetPersistentDataPath(string assetPath = null)
         {
-            string outputPath = Path.Combine(Application.persistentDataPath, AssetBundleConfig.AssetBundlesFolderName);
+            string outputPath = System.IO.Path.Combine(Application.persistentDataPath, AssetBundlesFolderName);
             if (!string.IsNullOrEmpty(assetPath))
             {
-                outputPath = Path.Combine(outputPath, assetPath);
+                outputPath = System.IO.Path.Combine(outputPath, assetPath);
             }
 #if UNITY_EDITOR_WIN
             return GameUtility.FormatToSysFilePath(outputPath);
 #else
             return outputPath;
 #endif
+        }
+     
+
+        public static string PackagePathToAssetsPath(string assetPath)
+        {
+            return "Assets/" + AssetsFolderName + "/" + assetPath;
+        }
+        
+        public static string AssetsPathToPackagePath(string assetPath)
+        {
+            // Assets/AssetsPackage/lua
+            string path = "Assets/" + AssetsFolderName + "/";
+            if (assetPath.StartsWith(path))
+            {
+                // lua
+                return assetPath.Substring(path.Length);
+            }
+            else
+            {
+                Debug.LogWarning(assetPath + " is not a package path!");
+                return assetPath;
+            }
         }
     } 
 }
