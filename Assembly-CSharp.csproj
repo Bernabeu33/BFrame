@@ -50,10 +50,14 @@
      <Compile Include="Assets/Scripts/Modules/ResMgr/PathMgr.cs" />
      <Compile Include="Assets/Scripts/Modules/ResMgr/HotFix/DownloadManager.cs" />
      <Compile Include="Assets/Scripts/Settings.cs" />
+     <Compile Include="Assets/Scripts/Utils/AndroidNativeHelper.cs" />
+     <Compile Include="Assets/Scripts/Utils/GameUtility.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Single" />
      <Folder Include="Assets/Scripts/Modules/AssetBundle" />
      <Folder Include="Assets/Scripts/Modules/ResMgr" />
+     <Folder Include="Assets/StreamingAssets" />
+     <Folder Include="Assets/StreamingAssets/AssetBundles" />
      <Folder Include="Assets/Scripts" />
      <Folder Include="Assets/Scripts/Modules/ResMgr/HotFix" />
      <Folder Include="Assets/AssetsPackage" />
