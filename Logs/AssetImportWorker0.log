@@ -7074,3 +7074,52 @@ AssetImportParameters requested are different than current active one (requested
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 286.514408 seconds.
+  path: Assets/Editor/BFrameMenu.cs
+  artifactKey: Guid(1dd86c90507ed4666a719a395eb81370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/BFrameMenu.cs using Guid(1dd86c90507ed4666a719a395eb81370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc2901250f617d8b2104f6f40c909c00') in 0.004716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 95.711938 seconds.
+  path: Assets/Editor/BFrameMenu.cs
+  artifactKey: Guid(1dd86c90507ed4666a719a395eb81370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/BFrameMenu.cs using Guid(1dd86c90507ed4666a719a395eb81370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ae849e472f1c221ee9c876393623fe1') in 0.002379 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001767 seconds.
+Callback registration failed. Increase kMaxCallback.
+Fatal Error! Callback registration failed. Increase kMaxCallback.
+Obtained 30 stack frames.
+#0  0x007fff2049b92e in __pthread_kill
+#1  0x007fff2041f406 in abort
+#2  0x00000110d93f7e in CrashDontLaunchBugReporter()
+#3  0x0000010f922932 in EditorMonoConsole::LogToConsoleImplementation(CppLogEntry&)
+#4  0x0000010f922067 in EditorMonoConsole::LogToConsoleImplementation(DebugStringToFileData const&)
+#5  0x0000010f92304e in LogToConsoleImplementation(DebugStringToFileData const&)
+#6  0x0000011092338c in DebugStringToFilePostprocessedStacktrace(DebugStringToFileData const&)
+#7  0x00000110923c6b in DebugStringToFile(DebugStringToFileData const&)
+#8  0x0000010e580c24 in CallbackArrayBase<void (*)(AssemblyLoadFailure), void (*)(void const*, AssemblyLoadFailure)>::Register(void (*)(AssemblyLoadFailure), void (*)(void const*, AssemblyLoadFailure), void const*)
+#9  0x0000010fd79da8 in LoadDomainAndUserAssemblies(bool)
+#10 0x0000010fd7ca26 in LoadUserAssemblies()
+#11 0x0000010ffb2aa9 in AssetImportWorkerClient::ReloadMonoDomain(AssetResolver&)
+#12 0x0000010ffd45bc in invocation function for block in AssetImportWorkerClient::HandleMessage(PrepareMessage const&)::$_5::operator()() const
+#13 0x007fff20320806 in _dispatch_client_callout
+#14 0x007fff2032d68d in _dispatch_async_and_wait_invoke
+#15 0x007fff20320806 in _dispatch_client_callout
+#16 0x007fff2032cb4f in _dispatch_main_queue_callback_4CF
+#17 0x007fff205fef18 in __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__
+#18 0x007fff205c1112 in __CFRunLoopRun
+#19 0x007fff205bff8c in CFRunLoopRunSpecific
+#20 0x007fff288081f3 in RunCurrentEventLoopInMode
+#21 0x007fff28807f55 in ReceiveNextEventCommon
+#22 0x007fff28807cf3 in _BlockUntilNextEventMatchingListInModeWithFilter
+#23 0x007fff22dc9172 in _DPSNextEvent
+#24 0x007fff22dc7945 in -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:]
+#25 0x007fff22db9c69 in -[NSApplication run]
+#26 0x007fff22d8de6c in NSApplicationMain
+#27 0x00000110dbc63d in EditorMain(int, char const**)
+#28 0x00000110dbc869 in main
+#29 0x007fff204e5f3d in start

@@ -694,6 +694,9 @@
      <Reference Include="UnityEngine.UI">
      <HintPath>/Users/mac/Desktop/WorkSpace/BFrame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AssetBundleBrowser.Editor">
+     <HintPath>/Users/mac/Desktop/WorkSpace/BFrame/Library/ScriptAssemblies/Unity.AssetBundleBrowser.Editor.dll</HintPath>
+     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">

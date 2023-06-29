@@ -8,7 +8,7 @@ public class BFrameMenu
 {
     private const string kSimulateMode = "BFrame/GameMode/Simulate Mode";
     private const string kEditorMode = "BFrame/GameMode/Editor Mode";
-    
+
 
     [MenuItem(kSimulateMode, false)]
     public static void ToggleSimulateMode()
@@ -26,6 +26,11 @@ public class BFrameMenu
         Menu.SetChecked(kEditorMode, true);
         Menu.SetChecked(kSimulateMode, false);
         Debug.Log("切换运行模式到:Editor");
+    }
+
+    [MenuItem("BFrame/Build/bundle/LZ4 Append Hash")]
+    public static void LZ4AppendHash()
+    {
     }
     
    
